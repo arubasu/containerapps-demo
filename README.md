@@ -60,4 +60,4 @@ az acr login --name azurefundaydemoacr.azurecr.io
 az acr build --image covid-api:latest --registry azurefundaydemoacr .
 ```
 
-##### Continue Demo on `Azure Portal` and `GitHub Action`.
+### Continue Demo on `Azure Portal` and `GitHub`.
