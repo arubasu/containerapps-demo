@@ -1,2 +1,10 @@
 node_modules
 data.json
+# TF state and Plan file
+*.tfplan
+*.tfstate
+*.backup
+.terraform*
+*.*bkp
+tmp
+creds.json
