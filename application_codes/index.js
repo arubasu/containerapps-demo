@@ -80,7 +80,7 @@ app.get('/api/:country/:date', (req, res, next) => {
  *
  *
  */
-/**
+
  app.get('/api/:country', (req, res, next) => {
   // Does country exist
   if(!data[req.params.country]) {
@@ -103,7 +103,6 @@ app.get('/api/:country/:date', (req, res, next) => {
   // Return
   res.json(output)
 })
-*/
 
 // Default Error Handler
 app.use((err, req, res, next) => {
