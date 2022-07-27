@@ -4,5 +4,5 @@ resource "azurerm_container_registry" "acr" {
   location            = azurerm_resource_group.demorg.location
   sku                 = "Basic"
   admin_enabled       = true
-  tags = var.tags
+  tags                = var.tags
 }

@@ -8,6 +8,13 @@ terraform plan -out main.tfplan
 terraform apply "main.tfplan
 ```
 
+From the terraform output, save the following variables
+
+* `acr_admin_password`
+* `acr_admin_username`
+* `acr_login_server`
+* `resource_group_name`
+
 ## Create a service principal
 
 You can create a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object) by using the [az ad sp create-for-rbac](https://docs.microsoft.com/en-us/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command in the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/).
@@ -29,3 +36,28 @@ In the above command, replace the placeholders with your subscription ID, and re
 ```
 
 Copy this JSON object/file, which you will use later.
+
+## Build the application and Deploy locally
+
+```
+cd application_codes
+npm install
+npm run start
+```
+
+Import the APIs into `VSCODE ` -> `Thunder Client`
+
+Access the API on `localhost` on port `8080`.
+
+You can use any other REST API Client as well.
+
+## Dockerize your application and push into ACR
+
+```
+# Start docker in your workstation
+cd application_codes
+az acr login --name azurefundaydemoacr.azurecr.io
+az acr build --image covid-api:latest --registry azurefundaydemoacr .
+```
+
+##### Continue Demo on `Azure Portal` and `GitHub Action`.

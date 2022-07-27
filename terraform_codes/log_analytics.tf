@@ -8,5 +8,5 @@ resource "azurerm_log_analytics_workspace" "aks_la" {
   resource_group_name = azurerm_resource_group.demorg.name
   sku                 = "PerGB2018"
   retention_in_days   = 30
-  tags = var.tags
+  tags                = var.tags
 }
