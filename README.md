@@ -1,3 +1,13 @@
+## Run the Terraform Scripts to create Azure Resources
+
+```
+cd terraform_codes
+terraform init
+terraform fmt && terraform vaidate
+terraform plan -out main.tfplan
+terraform apply "main.tfplan
+```
+
 ## Create a service principal
 
 You can create a [service principal](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals#service-principal-object) by using the [az ad sp create-for-rbac](https://docs.microsoft.com/en-us/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command in the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/).
