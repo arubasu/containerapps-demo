@@ -3,7 +3,7 @@ variable "resource_group" {
 }
 
 variable "location" {
-  default = "East Asia"
+  default = "East US"
 }
 
 variable "container_registry" {
