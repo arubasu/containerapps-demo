@@ -103,7 +103,6 @@ app.get('/api/:country/:date', (req, res, next) => {
   // Return
   res.json(output)
 })
-// Code
 
 // Default Error Handler
 app.use((err, req, res, next) => {
